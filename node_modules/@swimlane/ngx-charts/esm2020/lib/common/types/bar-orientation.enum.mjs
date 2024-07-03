@@ -1,0 +1,6 @@
+export var BarOrientation;
+(function (BarOrientation) {
+    BarOrientation["Vertical"] = "vertical";
+    BarOrientation["Horizontal"] = "horizontal";
+})(BarOrientation || (BarOrientation = {}));
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYmFyLW9yaWVudGF0aW9uLmVudW0uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi8uLi8uLi8uLi9wcm9qZWN0cy9zd2ltbGFuZS9uZ3gtY2hhcnRzL3NyYy9saWIvY29tbW9uL3R5cGVzL2Jhci1vcmllbnRhdGlvbi5lbnVtLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE1BQU0sQ0FBTixJQUFZLGNBR1g7QUFIRCxXQUFZLGNBQWM7SUFDeEIsdUNBQXFCLENBQUE7SUFDckIsMkNBQXlCLENBQUE7QUFDM0IsQ0FBQyxFQUhXLGNBQWMsS0FBZCxjQUFjLFFBR3pCIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGVudW0gQmFyT3JpZW50YXRpb24ge1xuICBWZXJ0aWNhbCA9ICd2ZXJ0aWNhbCcsXG4gIEhvcml6b250YWwgPSAnaG9yaXpvbnRhbCdcbn1cbiJdfQ==

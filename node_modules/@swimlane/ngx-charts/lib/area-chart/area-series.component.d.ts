@@ -1,0 +1,33 @@
+import { EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
+import { ColorHelper } from '../common/color.helper';
+import { Gradient } from '../common/types/gradient.interface';
+import { ScaleType } from '../common/types/scale-type.enum';
+import { AreaChartSeries } from '../models/chart-data.model';
+import * as i0 from "@angular/core";
+export declare class AreaSeriesComponent implements OnChanges {
+    data: AreaChartSeries;
+    xScale: any;
+    yScale: any;
+    baseValue: any;
+    colors: ColorHelper;
+    scaleType: ScaleType;
+    stacked: boolean;
+    normalized: boolean;
+    gradient: boolean;
+    curve: any;
+    activeEntries: any[];
+    animations: boolean;
+    select: EventEmitter<any>;
+    opacity: number;
+    path: string;
+    startingPath: string;
+    hasGradient: boolean;
+    gradientStops: Gradient[];
+    ngOnChanges(changes: SimpleChanges): void;
+    update(): void;
+    updateGradient(): void;
+    isActive(entry: any): boolean;
+    isInactive(entry: any): boolean;
+    static ɵfac: i0.ɵɵFactoryDeclaration<AreaSeriesComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<AreaSeriesComponent, "g[ngx-charts-area-series]", never, { "data": "data"; "xScale": "xScale"; "yScale": "yScale"; "baseValue": "baseValue"; "colors": "colors"; "scaleType": "scaleType"; "stacked": "stacked"; "normalized": "normalized"; "gradient": "gradient"; "curve": "curve"; "activeEntries": "activeEntries"; "animations": "animations"; }, { "select": "select"; }, never, never>;
+}

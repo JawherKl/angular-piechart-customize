@@ -1,0 +1,6 @@
+export var D0Types;
+(function (D0Types) {
+    D0Types["positive"] = "positive";
+    D0Types["negative"] = "negative";
+})(D0Types || (D0Types = {}));
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZDAtdHlwZS5lbnVtLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vLi4vcHJvamVjdHMvc3dpbWxhbmUvbmd4LWNoYXJ0cy9zcmMvbGliL2Jhci1jaGFydC90eXBlcy9kMC10eXBlLmVudW0udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsTUFBTSxDQUFOLElBQVksT0FHWDtBQUhELFdBQVksT0FBTztJQUNqQixnQ0FBcUIsQ0FBQTtJQUNyQixnQ0FBcUIsQ0FBQTtBQUN2QixDQUFDLEVBSFcsT0FBTyxLQUFQLE9BQU8sUUFHbEIiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZW51bSBEMFR5cGVzIHtcbiAgcG9zaXRpdmUgPSAncG9zaXRpdmUnLFxuICBuZWdhdGl2ZSA9ICduZWdhdGl2ZSdcbn1cbiJdfQ==

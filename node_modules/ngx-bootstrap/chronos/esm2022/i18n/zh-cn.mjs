@@ -1,0 +1,109 @@
+//! moment.js locale configuration
+//! locale : Chinese (China) [zh-cn]
+//! author : suupic : https://github.com/suupic
+//! author : Zeno Zeng : https://github.com/zenozeng
+export const zhCnLocale = {
+    abbr: 'zh-cn',
+    months: '一月_二月_三月_四月_五月_六月_七月_八月_九月_十月_十一月_十二月'.split('_'),
+    monthsShort: '1月_2月_3月_4月_5月_6月_7月_8月_9月_10月_11月_12月'.split('_'),
+    weekdays: '星期日_星期一_星期二_星期三_星期四_星期五_星期六'.split('_'),
+    weekdaysShort: '周日_周一_周二_周三_周四_周五_周六'.split('_'),
+    weekdaysMin: '日_一_二_三_四_五_六'.split('_'),
+    longDateFormat: {
+        LT: 'HH:mm',
+        LTS: 'HH:mm:ss',
+        L: 'YYYY/MM/DD',
+        LL: 'YYYY年M月D日',
+        LLL: 'YYYY年M月D日Ah点mm分',
+        LLLL: 'YYYY年M月D日ddddAh点mm分',
+        l: 'YYYY/M/D',
+        ll: 'YYYY年M月D日',
+        lll: 'YYYY年M月D日 HH:mm',
+        llll: 'YYYY年M月D日dddd HH:mm'
+    },
+    meridiemParse: /凌晨|早上|上午|中午|下午|晚上/,
+    meridiemHour(hour, meridiem) {
+        if (hour === 12) {
+            hour = 0;
+        }
+        if (meridiem === '凌晨' || meridiem === '早上' ||
+            meridiem === '上午') {
+            return hour;
+        }
+        else if (meridiem === '下午' || meridiem === '晚上') {
+            return hour + 12;
+        }
+        else {
+            // '中午'
+            return hour >= 11 ? hour : hour + 12;
+        }
+    },
+    meridiem(hour, minute, isLower) {
+        let hm = hour * 100 + minute;
+        if (hm < 600) {
+            return '凌晨';
+        }
+        else if (hm < 900) {
+            return '早上';
+        }
+        else if (hm < 1130) {
+            return '上午';
+        }
+        else if (hm < 1230) {
+            return '中午';
+        }
+        else if (hm < 1800) {
+            return '下午';
+        }
+        else {
+            return '晚上';
+        }
+    },
+    calendar: {
+        sameDay: '[今天]LT',
+        nextDay: '[明天]LT',
+        nextWeek: '[下]ddddLT',
+        lastDay: '[昨天]LT',
+        lastWeek: '[上]ddddLT',
+        sameElse: 'L'
+    },
+    dayOfMonthOrdinalParse: /\d{1,2}(日|月|周)/,
+    ordinal(_num, period) {
+        const num = Number(_num);
+        switch (period) {
+            case 'd':
+            case 'D':
+            case 'DDD':
+                return num + '日';
+            case 'M':
+                return num + '月';
+            case 'w':
+            case 'W':
+                return num + '周';
+            default:
+                return num.toString();
+        }
+    },
+    relativeTime: {
+        future: '%s内',
+        past: '%s前',
+        s: '几秒',
+        ss: '%d 秒',
+        m: '1 分钟',
+        mm: '%d 分钟',
+        h: '1 小时',
+        hh: '%d 小时',
+        d: '1 天',
+        dd: '%d 天',
+        M: '1 个月',
+        MM: '%d 个月',
+        y: '1 年',
+        yy: '%d 年'
+    },
+    week: {
+        // GB/T 7408-1994《数据元和交换格式·信息交换·日期和时间表示法》与ISO 8601:1988等效
+        dow: 1,
+        doy: 4 // The week that contains Jan 4th is the first week of the year.
+    }
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiemgtY24uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi8uLi9zcmMvY2hyb25vcy9pMThuL3poLWNuLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBLGtDQUFrQztBQUNsQyxvQ0FBb0M7QUFDcEMsK0NBQStDO0FBQy9DLG9EQUFvRDtBQUVwRCxNQUFNLENBQUMsTUFBTSxVQUFVLEdBQWU7SUFDcEMsSUFBSSxFQUFFLE9BQU87SUFDYixNQUFNLEVBQUUsdUNBQXVDLENBQUMsS0FBSyxDQUFDLEdBQUcsQ0FBQztJQUMxRCxXQUFXLEVBQUUsd0NBQXdDLENBQUMsS0FBSyxDQUFDLEdBQUcsQ0FBQztJQUNoRSxRQUFRLEVBQUUsNkJBQTZCLENBQUMsS0FBSyxDQUFDLEdBQUcsQ0FBQztJQUNsRCxhQUFhLEVBQUUsc0JBQXNCLENBQUMsS0FBSyxDQUFDLEdBQUcsQ0FBQztJQUNoRCxXQUFXLEVBQUUsZUFBZSxDQUFDLEtBQUssQ0FBQyxHQUFHLENBQUM7SUFDdkMsY0FBYyxFQUFFO1FBQ2QsRUFBRSxFQUFFLE9BQU87UUFDWCxHQUFHLEVBQUUsVUFBVTtRQUNmLENBQUMsRUFBRSxZQUFZO1FBQ2YsRUFBRSxFQUFFLFdBQVc7UUFDZixHQUFHLEVBQUUsaUJBQWlCO1FBQ3RCLElBQUksRUFBRSxxQkFBcUI7UUFDM0IsQ0FBQyxFQUFFLFVBQVU7UUFDYixFQUFFLEVBQUUsV0FBVztRQUNmLEdBQUcsRUFBRSxpQkFBaUI7UUFDdEIsSUFBSSxFQUFFLHFCQUFxQjtLQUM1QjtJQUNELGFBQWEsRUFBRSxtQkFBbUI7SUFDbEMsWUFBWSxDQUFDLElBQUksRUFBRSxRQUFRO1FBQ3pCLElBQUksSUFBSSxLQUFLLEVBQUUsRUFBRTtZQUNmLElBQUksR0FBRyxDQUFDLENBQUM7U0FDVjtRQUNELElBQUksUUFBUSxLQUFLLElBQUksSUFBSSxRQUFRLEtBQUssSUFBSTtZQUN4QyxRQUFRLEtBQUssSUFBSSxFQUFFO1lBQ25CLE9BQU8sSUFBSSxDQUFDO1NBQ2I7YUFBTSxJQUFJLFFBQVEsS0FBSyxJQUFJLElBQUksUUFBUSxLQUFLLElBQUksRUFBRTtZQUNqRCxPQUFPLElBQUksR0FBRyxFQUFFLENBQUM7U0FDbEI7YUFBTTtZQUNMLE9BQU87WUFDUCxPQUFPLElBQUksSUFBSSxFQUFFLENBQUMsQ0FBQyxDQUFDLElBQUksQ0FBQyxDQUFDLENBQUMsSUFBSSxHQUFHLEVBQUUsQ0FBQztTQUN0QztJQUNILENBQUM7SUFDRCxRQUFRLENBQUMsSUFBSSxFQUFFLE1BQU0sRUFBRSxPQUFPO1FBQzVCLElBQUksRUFBRSxHQUFHLElBQUksR0FBRyxHQUFHLEdBQUcsTUFBTSxDQUFDO1FBQzdCLElBQUksRUFBRSxHQUFHLEdBQUcsRUFBRTtZQUNaLE9BQU8sSUFBSSxDQUFDO1NBQ2I7YUFBTSxJQUFJLEVBQUUsR0FBRyxHQUFHLEVBQUU7WUFDbkIsT0FBTyxJQUFJLENBQUM7U0FDYjthQUFNLElBQUksRUFBRSxHQUFHLElBQUksRUFBRTtZQUNwQixPQUFPLElBQUksQ0FBQztTQUNiO2FBQU0sSUFBSSxFQUFFLEdBQUcsSUFBSSxFQUFFO1lBQ3BCLE9BQU8sSUFBSSxDQUFDO1NBQ2I7YUFBTSxJQUFJLEVBQUUsR0FBRyxJQUFJLEVBQUU7WUFDcEIsT0FBTyxJQUFJLENBQUM7U0FDYjthQUFNO1lBQ0wsT0FBTyxJQUFJLENBQUM7U0FDYjtJQUNILENBQUM7SUFDRCxRQUFRLEVBQUU7UUFDUixPQUFPLEVBQUUsUUFBUTtRQUNqQixPQUFPLEVBQUUsUUFBUTtRQUNqQixRQUFRLEVBQUUsV0FBVztRQUNyQixPQUFPLEVBQUUsUUFBUTtRQUNqQixRQUFRLEVBQUUsV0FBVztRQUNyQixRQUFRLEVBQUUsR0FBRztLQUNkO0lBQ0Qsc0JBQXNCLEVBQUUsZ0JBQWdCO0lBQ3hDLE9BQU8sQ0FBQyxJQUFZLEVBQUUsTUFBTTtRQUMxQixNQUFNLEdBQUcsR0FBRyxNQUFNLENBQUMsSUFBSSxDQUFDLENBQUM7UUFDekIsUUFBUSxNQUFNLEVBQUU7WUFDZCxLQUFLLEdBQUcsQ0FBQztZQUNULEtBQUssR0FBRyxDQUFDO1lBQ1QsS0FBSyxLQUFLO2dCQUNSLE9BQU8sR0FBRyxHQUFHLEdBQUcsQ0FBQztZQUNuQixLQUFLLEdBQUc7Z0JBQ04sT0FBTyxHQUFHLEdBQUcsR0FBRyxDQUFDO1lBQ25CLEtBQUssR0FBRyxDQUFDO1lBQ1QsS0FBSyxHQUFHO2dCQUNOLE9BQU8sR0FBRyxHQUFHLEdBQUcsQ0FBQztZQUNuQjtnQkFDRSxPQUFPLEdBQUcsQ0FBQyxRQUFRLEVBQUUsQ0FBQztTQUN6QjtJQUNILENBQUM7SUFDRCxZQUFZLEVBQUU7UUFDWixNQUFNLEVBQUUsS0FBSztRQUNiLElBQUksRUFBRSxLQUFLO1FBQ1gsQ0FBQyxFQUFFLElBQUk7UUFDUCxFQUFFLEVBQUUsTUFBTTtRQUNWLENBQUMsRUFBRSxNQUFNO1FBQ1QsRUFBRSxFQUFFLE9BQU87UUFDWCxDQUFDLEVBQUUsTUFBTTtRQUNULEVBQUUsRUFBRSxPQUFPO1FBQ1gsQ0FBQyxFQUFFLEtBQUs7UUFDUixFQUFFLEVBQUUsTUFBTTtRQUNWLENBQUMsRUFBRSxNQUFNO1FBQ1QsRUFBRSxFQUFFLE9BQU87UUFDWCxDQUFDLEVBQUUsS0FBSztRQUNSLEVBQUUsRUFBRSxNQUFNO0tBQ1g7SUFDRCxJQUFJLEVBQUU7UUFDSix5REFBeUQ7UUFDekQsR0FBRyxFQUFFLENBQUM7UUFDTixHQUFHLEVBQUUsQ0FBQyxDQUFFLGdFQUFnRTtLQUN6RTtDQUNGLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBMb2NhbGVEYXRhIH0gZnJvbSAnLi4vbG9jYWxlL2xvY2FsZS5jbGFzcyc7XG5cbi8vISBtb21lbnQuanMgbG9jYWxlIGNvbmZpZ3VyYXRpb25cbi8vISBsb2NhbGUgOiBDaGluZXNlIChDaGluYSkgW3poLWNuXVxuLy8hIGF1dGhvciA6IHN1dXBpYyA6IGh0dHBzOi8vZ2l0aHViLmNvbS9zdXVwaWNcbi8vISBhdXRob3IgOiBaZW5vIFplbmcgOiBodHRwczovL2dpdGh1Yi5jb20vemVub3plbmdcblxuZXhwb3J0IGNvbnN0IHpoQ25Mb2NhbGU6IExvY2FsZURhdGEgPSB7XG4gIGFiYnI6ICd6aC1jbicsXG4gIG1vbnRoczogJ+S4gOaciF/kuozmnIhf5LiJ5pyIX+Wbm+aciF/kupTmnIhf5YWt5pyIX+S4g+aciF/lhavmnIhf5Lmd5pyIX+WNgeaciF/ljYHkuIDmnIhf5Y2B5LqM5pyIJy5zcGxpdCgnXycpLFxuICBtb250aHNTaG9ydDogJzHmnIhfMuaciF8z5pyIXzTmnIhfNeaciF825pyIXzfmnIhfOOaciF855pyIXzEw5pyIXzEx5pyIXzEy5pyIJy5zcGxpdCgnXycpLFxuICB3ZWVrZGF5czogJ+aYn+acn+aXpV/mmJ/mnJ/kuIBf5pif5pyf5LqMX+aYn+acn+S4iV/mmJ/mnJ/lm5tf5pif5pyf5LqUX+aYn+acn+WFrScuc3BsaXQoJ18nKSxcbiAgd2Vla2RheXNTaG9ydDogJ+WRqOaXpV/lkajkuIBf5ZGo5LqMX+WRqOS4iV/lkajlm5tf5ZGo5LqUX+WRqOWFrScuc3BsaXQoJ18nKSxcbiAgd2Vla2RheXNNaW46ICfml6Vf5LiAX+S6jF/kuIlf5ZubX+S6lF/lha0nLnNwbGl0KCdfJyksXG4gIGxvbmdEYXRlRm9ybWF0OiB7XG4gICAgTFQ6ICdISDptbScsXG4gICAgTFRTOiAnSEg6bW06c3MnLFxuICAgIEw6ICdZWVlZL01NL0REJyxcbiAgICBMTDogJ1lZWVnlubRN5pyIROaXpScsXG4gICAgTExMOiAnWVlZWeW5tE3mnIhE5pelQWjngrltbeWIhicsXG4gICAgTExMTDogJ1lZWVnlubRN5pyIROaXpWRkZGRBaOeCuW1t5YiGJyxcbiAgICBsOiAnWVlZWS9NL0QnLFxuICAgIGxsOiAnWVlZWeW5tE3mnIhE5pelJyxcbiAgICBsbGw6ICdZWVlZ5bm0TeaciETml6UgSEg6bW0nLFxuICAgIGxsbGw6ICdZWVlZ5bm0TeaciETml6VkZGRkIEhIOm1tJ1xuICB9LFxuICBtZXJpZGllbVBhcnNlOiAv5YeM5pmofOaXqeS4inzkuIrljYh85Lit5Y2IfOS4i+WNiHzmmZrkuIovLFxuICBtZXJpZGllbUhvdXIoaG91ciwgbWVyaWRpZW0pIHtcbiAgICBpZiAoaG91ciA9PT0gMTIpIHtcbiAgICAgIGhvdXIgPSAwO1xuICAgIH1cbiAgICBpZiAobWVyaWRpZW0gPT09ICflh4zmmagnIHx8IG1lcmlkaWVtID09PSAn5pep5LiKJyB8fFxuICAgICAgbWVyaWRpZW0gPT09ICfkuIrljYgnKSB7XG4gICAgICByZXR1cm4gaG91cjtcbiAgICB9IGVsc2UgaWYgKG1lcmlkaWVtID09PSAn5LiL5Y2IJyB8fCBtZXJpZGllbSA9PT0gJ+aZmuS4iicpIHtcbiAgICAgIHJldHVybiBob3VyICsgMTI7XG4gICAgfSBlbHNlIHtcbiAgICAgIC8vICfkuK3ljYgnXG4gICAgICByZXR1cm4gaG91ciA+PSAxMSA/IGhvdXIgOiBob3VyICsgMTI7XG4gICAgfVxuICB9LFxuICBtZXJpZGllbShob3VyLCBtaW51dGUsIGlzTG93ZXIpIHtcbiAgICBsZXQgaG0gPSBob3VyICogMTAwICsgbWludXRlO1xuICAgIGlmIChobSA8IDYwMCkge1xuICAgICAgcmV0dXJuICflh4zmmagnO1xuICAgIH0gZWxzZSBpZiAoaG0gPCA5MDApIHtcbiAgICAgIHJldHVybiAn5pep5LiKJztcbiAgICB9IGVsc2UgaWYgKGhtIDwgMTEzMCkge1xuICAgICAgcmV0dXJuICfkuIrljYgnO1xuICAgIH0gZWxzZSBpZiAoaG0gPCAxMjMwKSB7XG4gICAgICByZXR1cm4gJ+S4reWNiCc7XG4gICAgfSBlbHNlIGlmIChobSA8IDE4MDApIHtcbiAgICAgIHJldHVybiAn5LiL5Y2IJztcbiAgICB9IGVsc2Uge1xuICAgICAgcmV0dXJuICfmmZrkuIonO1xuICAgIH1cbiAgfSxcbiAgY2FsZW5kYXI6IHtcbiAgICBzYW1lRGF5OiAnW+S7iuWkqV1MVCcsXG4gICAgbmV4dERheTogJ1vmmI7lpKldTFQnLFxuICAgIG5leHRXZWVrOiAnW+S4i11kZGRkTFQnLFxuICAgIGxhc3REYXk6ICdb5pio5aSpXUxUJyxcbiAgICBsYXN0V2VlazogJ1vkuIpdZGRkZExUJyxcbiAgICBzYW1lRWxzZTogJ0wnXG4gIH0sXG4gIGRheU9mTW9udGhPcmRpbmFsUGFyc2U6IC9cXGR7MSwyfSjml6V85pyIfOWRqCkvLFxuICBvcmRpbmFsKF9udW06IG51bWJlciwgcGVyaW9kKSB7XG4gICAgY29uc3QgbnVtID0gTnVtYmVyKF9udW0pO1xuICAgIHN3aXRjaCAocGVyaW9kKSB7XG4gICAgICBjYXNlICdkJzpcbiAgICAgIGNhc2UgJ0QnOlxuICAgICAgY2FzZSAnREREJzpcbiAgICAgICAgcmV0dXJuIG51bSArICfml6UnO1xuICAgICAgY2FzZSAnTSc6XG4gICAgICAgIHJldHVybiBudW0gKyAn5pyIJztcbiAgICAgIGNhc2UgJ3cnOlxuICAgICAgY2FzZSAnVyc6XG4gICAgICAgIHJldHVybiBudW0gKyAn5ZGoJztcbiAgICAgIGRlZmF1bHQ6XG4gICAgICAgIHJldHVybiBudW0udG9TdHJpbmcoKTtcbiAgICB9XG4gIH0sXG4gIHJlbGF0aXZlVGltZToge1xuICAgIGZ1dHVyZTogJyVz5YaFJyxcbiAgICBwYXN0OiAnJXPliY0nLFxuICAgIHM6ICflh6Dnp5InLFxuICAgIHNzOiAnJWQg56eSJyxcbiAgICBtOiAnMSDliIbpkp8nLFxuICAgIG1tOiAnJWQg5YiG6ZKfJyxcbiAgICBoOiAnMSDlsI/ml7YnLFxuICAgIGhoOiAnJWQg5bCP5pe2JyxcbiAgICBkOiAnMSDlpKknLFxuICAgIGRkOiAnJWQg5aSpJyxcbiAgICBNOiAnMSDkuKrmnIgnLFxuICAgIE1NOiAnJWQg5Liq5pyIJyxcbiAgICB5OiAnMSDlubQnLFxuICAgIHl5OiAnJWQg5bm0J1xuICB9LFxuICB3ZWVrOiB7XG4gICAgLy8gR0IvVCA3NDA4LTE5OTTjgIrmlbDmja7lhYPlkozkuqTmjaLmoLzlvI/Ct+S/oeaBr+S6pOaNosK35pel5pyf5ZKM5pe26Ze06KGo56S65rOV44CL5LiOSVNPIDg2MDE6MTk4OOetieaViFxuICAgIGRvdzogMSwgLy8gTW9uZGF5IGlzIHRoZSBmaXJzdCBkYXkgb2YgdGhlIHdlZWsuXG4gICAgZG95OiA0ICAvLyBUaGUgd2VlayB0aGF0IGNvbnRhaW5zIEphbiA0dGggaXMgdGhlIGZpcnN0IHdlZWsgb2YgdGhlIHllYXIuXG4gIH1cbn07XG4iXX0=

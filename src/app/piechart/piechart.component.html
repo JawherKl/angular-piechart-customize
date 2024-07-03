@@ -1,0 +1,41 @@
+<div class="text-center">
+  <div class="pie-chart-container">
+    <div *ngIf="tooltipVisible" class="custom-tooltip" [ngStyle]="tooltipStyle">
+      <ng-container
+        *ngTemplateOutlet="customTooltipTemplate; context: tooltipContext"
+      ></ng-container>
+    </div>
+    <ngx-charts-pie-chart
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="data"
+      [legend]="true"
+      [legendTitle]="''"
+      [tooltipDisabled]="true"
+      (activate)="getDataItem($event)"
+      (mouseenter)="showTooltip($event)"
+      (mousemove)="updateTooltipPosition($event)"
+      (mouseleave)="hideTooltip()"
+      class="pie-chart"
+    >
+    </ngx-charts-pie-chart>
+  </div>
+  <ng-template #customTooltipTemplate let-model="model">
+    <div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="12"
+        height="12"
+        fill="currentColor"
+        class="bi bi-square-fill"
+        viewBox="0 0 16 16"
+        [ngStyle]="{ color: getColorByItemName(model.name) }"
+      >
+        <path
+          d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2z"
+        />
+      </svg>
+      {{ model.name }} <strong> {{ model.value }} </strong>
+    </div>
+  </ng-template>
+</div>

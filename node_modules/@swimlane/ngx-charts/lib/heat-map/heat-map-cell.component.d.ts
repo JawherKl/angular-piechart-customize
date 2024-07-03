@@ -1,0 +1,34 @@
+import { EventEmitter, SimpleChanges, ElementRef, OnChanges } from '@angular/core';
+import { BarOrientation } from '../common/types/bar-orientation.enum';
+import { Gradient } from '../common/types/gradient.interface';
+import * as i0 from "@angular/core";
+export declare class HeatMapCellComponent implements OnChanges {
+    fill: string;
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+    data: number;
+    gradient: boolean;
+    animations: boolean;
+    select: EventEmitter<number>;
+    activate: EventEmitter<number>;
+    deactivate: EventEmitter<number>;
+    element: HTMLElement;
+    transform: string;
+    startOpacity: number;
+    gradientId: string;
+    gradientUrl: string;
+    gradientStops: Gradient[];
+    barOrientation: typeof BarOrientation;
+    constructor(element: ElementRef);
+    ngOnChanges(changes: SimpleChanges): void;
+    getGradientStops(): Gradient[];
+    loadAnimation(): void;
+    animateToCurrentForm(): void;
+    onClick(): void;
+    onMouseEnter(): void;
+    onMouseLeave(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<HeatMapCellComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<HeatMapCellComponent, "g[ngx-charts-heat-map-cell]", never, { "fill": "fill"; "x": "x"; "y": "y"; "width": "width"; "height": "height"; "data": "data"; "gradient": "gradient"; "animations": "animations"; }, { "select": "select"; "activate": "activate"; "deactivate": "deactivate"; }, never, never>;
+}

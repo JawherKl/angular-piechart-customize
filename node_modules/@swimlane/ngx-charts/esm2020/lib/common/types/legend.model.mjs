@@ -1,0 +1,11 @@
+export var LegendPosition;
+(function (LegendPosition) {
+    LegendPosition["Right"] = "right";
+    LegendPosition["Below"] = "below";
+})(LegendPosition || (LegendPosition = {}));
+export var LegendType;
+(function (LegendType) {
+    LegendType["ScaleLegend"] = "scaleLegend";
+    LegendType["Legend"] = "legend";
+})(LegendType || (LegendType = {}));
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibGVnZW5kLm1vZGVsLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vLi4vcHJvamVjdHMvc3dpbWxhbmUvbmd4LWNoYXJ0cy9zcmMvbGliL2NvbW1vbi90eXBlcy9sZWdlbmQubW9kZWwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBVUEsTUFBTSxDQUFOLElBQVksY0FHWDtBQUhELFdBQVksY0FBYztJQUN4QixpQ0FBZSxDQUFBO0lBQ2YsaUNBQWUsQ0FBQTtBQUNqQixDQUFDLEVBSFcsY0FBYyxLQUFkLGNBQWMsUUFHekI7QUFFRCxNQUFNLENBQU4sSUFBWSxVQUdYO0FBSEQsV0FBWSxVQUFVO0lBQ3BCLHlDQUEyQixDQUFBO0lBQzNCLCtCQUFpQixDQUFBO0FBQ25CLENBQUMsRUFIVyxVQUFVLEtBQVYsVUFBVSxRQUdyQiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IFNjYWxlVHlwZSB9IGZyb20gJy4vc2NhbGUtdHlwZS5lbnVtJztcblxuZXhwb3J0IGludGVyZmFjZSBMZWdlbmRPcHRpb25zIHtcbiAgY29sb3JzOiBhbnk7XG4gIGRvbWFpbjogYW55W107XG4gIHBvc2l0aW9uOiBMZWdlbmRQb3NpdGlvbjtcbiAgdGl0bGU6IHN0cmluZztcbiAgc2NhbGVUeXBlOiBTY2FsZVR5cGU7XG59XG5cbmV4cG9ydCBlbnVtIExlZ2VuZFBvc2l0aW9uIHtcbiAgUmlnaHQgPSAncmlnaHQnLFxuICBCZWxvdyA9ICdiZWxvdydcbn1cblxuZXhwb3J0IGVudW0gTGVnZW5kVHlwZSB7XG4gIFNjYWxlTGVnZW5kID0gJ3NjYWxlTGVnZW5kJyxcbiAgTGVnZW5kID0gJ2xlZ2VuZCdcbn1cbiJdfQ==

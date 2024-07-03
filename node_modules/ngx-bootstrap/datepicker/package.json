@@ -1,0 +1,33 @@
+{
+  "name": "ngx-bootstrap/datepicker",
+  "version": "11.0.2",
+  "author": "Dmitriy Shekhovtsov <valorkin@gmail.com>",
+  "license": "MIT",
+  "module": "fesm2022/ngx-bootstrap-datepicker.mjs",
+  "typings": "index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "esm2022": "./esm2022/ngx-bootstrap-datepicker.mjs",
+      "esm": "./esm2022/ngx-bootstrap-datepicker.mjs",
+      "default": "./fesm2022/ngx-bootstrap-datepicker.mjs"
+    }
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "peerDependencies": {
+    "rxjs": "7.8.1",
+    "@angular/core": "16.1.4",
+    "ngx-bootstrap/component-loader": "11.0.2",
+    "@angular/forms": "16.1.4",
+    "ngx-bootstrap/chronos": "11.0.2",
+    "ngx-bootstrap/tooltip": "11.0.2",
+    "ngx-bootstrap/timepicker": "11.0.2",
+    "@angular/animations": "16.1.4"
+  }
+}

@@ -1,0 +1,24 @@
+p {
+  font-family: Lato;
+}
+.pie-chart {
+  font-family: 14px;
+  stroke-opacity: 1;
+}
+.text-center {
+  text-align: center !important;
+}
+.custom-tooltip {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 6px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+  z-index: 10; /* Ensure tooltip is on top */
+}
+.text-strong {
+  font-weight: 700;
+  color: #646061;
+}

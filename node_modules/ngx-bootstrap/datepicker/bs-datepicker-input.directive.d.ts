@@ -1,0 +1,33 @@
+import { ChangeDetectorRef, ElementRef, OnDestroy, OnInit, Renderer2 } from '@angular/core';
+import { AbstractControl, ControlValueAccessor, ValidationErrors, Validator } from '@angular/forms';
+import { BsDatepickerDirective } from './bs-datepicker.component';
+import { BsLocaleService } from './bs-locale.service';
+import * as i0 from "@angular/core";
+export declare class BsDatepickerInputDirective implements ControlValueAccessor, Validator, OnInit, OnDestroy {
+    private _picker;
+    private _localeService;
+    private _renderer;
+    private _elRef;
+    private changeDetection;
+    private _onChange;
+    private _onTouched;
+    private _validatorChange;
+    private _value?;
+    private _subs;
+    constructor(_picker: BsDatepickerDirective, _localeService: BsLocaleService, _renderer: Renderer2, _elRef: ElementRef, changeDetection: ChangeDetectorRef);
+    ngOnInit(): void;
+    ngOnDestroy(): void;
+    onKeydownEvent(event: KeyboardEvent): void;
+    _setInputValue(value?: Date): void;
+    onChange(event: Event): void;
+    validate(c: AbstractControl): ValidationErrors | null;
+    registerOnValidatorChange(fn: () => void): void;
+    writeValue(value: Date | string): void;
+    setDisabledState(isDisabled: boolean): void;
+    registerOnChange(fn: () => void): void;
+    registerOnTouched(fn: () => void): void;
+    onBlur(): void;
+    hide(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<BsDatepickerInputDirective, [{ host: true; }, null, null, null, null]>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<BsDatepickerInputDirective, "input[bsDatepicker]", never, {}, {}, never, never, false, never>;
+}

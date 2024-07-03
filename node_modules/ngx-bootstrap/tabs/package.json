@@ -1,0 +1,27 @@
+{
+  "name": "ngx-bootstrap/tabs",
+  "version": "11.0.2",
+  "author": "Dmitriy Shekhovtsov <valorkin@gmail.com>",
+  "license": "MIT",
+  "module": "fesm2022/ngx-bootstrap-tabs.mjs",
+  "typings": "index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "esm2022": "./esm2022/ngx-bootstrap-tabs.mjs",
+      "esm": "./esm2022/ngx-bootstrap-tabs.mjs",
+      "default": "./fesm2022/ngx-bootstrap-tabs.mjs"
+    }
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "peerDependencies": {
+    "@angular/core": "16.1.4",
+    "@angular/common": "16.1.4"
+  }
+}

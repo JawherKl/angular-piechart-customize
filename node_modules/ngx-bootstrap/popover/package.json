@@ -1,0 +1,29 @@
+{
+  "name": "ngx-bootstrap/popover",
+  "version": "11.0.2",
+  "author": "Dmitriy Shekhovtsov <valorkin@gmail.com>",
+  "license": "MIT",
+  "module": "fesm2022/ngx-bootstrap-popover.mjs",
+  "typings": "index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "esm2022": "./esm2022/ngx-bootstrap-popover.mjs",
+      "esm": "./esm2022/ngx-bootstrap-popover.mjs",
+      "default": "./fesm2022/ngx-bootstrap-popover.mjs"
+    }
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "peerDependencies": {
+    "@angular/core": "16.1.4",
+    "ngx-bootstrap/utils": "11.0.2",
+    "ngx-bootstrap/positioning": "11.0.2",
+    "ngx-bootstrap/component-loader": "11.0.2"
+  }
+}

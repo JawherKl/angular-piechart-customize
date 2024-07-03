@@ -1,0 +1,42 @@
+import { NgModule } from '@angular/core';
+import { NgbDatepicker, NgbDatepickerContent } from './datepicker';
+import { NgbDatepickerMonth } from './datepicker';
+import { NgbInputDatepicker } from './datepicker-input';
+import * as i0 from "@angular/core";
+export { NgbDatepicker, NgbDatepickerContent } from './datepicker';
+export { NgbInputDatepicker } from './datepicker-input';
+export { NgbCalendar, NgbCalendarGregorian } from './ngb-calendar';
+export { NgbCalendarIslamicCivil } from './hijri/ngb-calendar-islamic-civil';
+export { NgbCalendarIslamicUmalqura } from './hijri/ngb-calendar-islamic-umalqura';
+export { NgbCalendarPersian } from './jalali/ngb-calendar-persian';
+export { NgbCalendarHebrew } from './hebrew/ngb-calendar-hebrew';
+export { NgbDatepickerI18nHebrew } from './hebrew/datepicker-i18n-hebrew';
+export { NgbCalendarBuddhist } from './buddhist/ngb-calendar-buddhist';
+export { NgbDatepickerMonth } from './datepicker';
+export { NgbDatepickerDayView } from './datepicker-day-view';
+export { NgbDatepickerNavigation } from './datepicker-navigation';
+export { NgbDatepickerNavigationSelect } from './datepicker-navigation-select';
+export { NgbDatepickerConfig } from './datepicker-config';
+export { NgbInputDatepickerConfig } from './datepicker-input-config';
+export { NgbDatepickerI18n, NgbDatepickerI18nDefault } from './datepicker-i18n';
+export { NgbDate } from './ngb-date';
+export { NgbDateAdapter, NgbDateStructAdapter } from './adapters/ngb-date-adapter';
+export { NgbDateNativeAdapter } from './adapters/ngb-date-native-adapter';
+export { NgbDateNativeUTCAdapter } from './adapters/ngb-date-native-utc-adapter';
+export { NgbDateParserFormatter } from './ngb-date-parser-formatter';
+export { NgbDatepickerKeyboardService } from './datepicker-keyboard-service';
+const NGB_DATEPICKER_DIRECTIVES = [NgbDatepicker, NgbDatepickerContent, NgbInputDatepicker, NgbDatepickerMonth];
+class NgbDatepickerModule {
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.0.6", ngImport: i0, type: NgbDatepickerModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule }); }
+    static { this.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "16.0.6", ngImport: i0, type: NgbDatepickerModule, imports: [NgbDatepicker, NgbDatepickerContent, NgbInputDatepicker, NgbDatepickerMonth], exports: [NgbDatepicker, NgbDatepickerContent, NgbInputDatepicker, NgbDatepickerMonth] }); }
+    static { this.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "16.0.6", ngImport: i0, type: NgbDatepickerModule }); }
+}
+export { NgbDatepickerModule };
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.0.6", ngImport: i0, type: NgbDatepickerModule, decorators: [{
+            type: NgModule,
+            args: [{
+                    exports: NGB_DATEPICKER_DIRECTIVES,
+                    imports: NGB_DATEPICKER_DIRECTIVES,
+                }]
+        }] });
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZGF0ZXBpY2tlci5tb2R1bGUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9zcmMvZGF0ZXBpY2tlci9kYXRlcGlja2VyLm1vZHVsZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEVBQUUsUUFBUSxFQUFFLE1BQU0sZUFBZSxDQUFDO0FBQ3pDLE9BQU8sRUFBRSxhQUFhLEVBQUUsb0JBQW9CLEVBQUUsTUFBTSxjQUFjLENBQUM7QUFDbkUsT0FBTyxFQUFFLGtCQUFrQixFQUFFLE1BQU0sY0FBYyxDQUFDO0FBQ2xELE9BQU8sRUFBRSxrQkFBa0IsRUFBRSxNQUFNLG9CQUFvQixDQUFDOztBQUV4RCxPQUFPLEVBQUUsYUFBYSxFQUFFLG9CQUFvQixFQUFrRCxNQUFNLGNBQWMsQ0FBQztBQUNuSCxPQUFPLEVBQUUsa0JBQWtCLEVBQUUsTUFBTSxvQkFBb0IsQ0FBQztBQUN4RCxPQUFPLEVBQUUsV0FBVyxFQUFhLG9CQUFvQixFQUFFLE1BQU0sZ0JBQWdCLENBQUM7QUFDOUUsT0FBTyxFQUFFLHVCQUF1QixFQUFFLE1BQU0sb0NBQW9DLENBQUM7QUFDN0UsT0FBTyxFQUFFLDBCQUEwQixFQUFFLE1BQU0sdUNBQXVDLENBQUM7QUFDbkYsT0FBTyxFQUFFLGtCQUFrQixFQUFFLE1BQU0sK0JBQStCLENBQUM7QUFDbkUsT0FBTyxFQUFFLGlCQUFpQixFQUFFLE1BQU0sOEJBQThCLENBQUM7QUFDakUsT0FBTyxFQUFFLHVCQUF1QixFQUFFLE1BQU0saUNBQWlDLENBQUM7QUFDMUUsT0FBTyxFQUFFLG1CQUFtQixFQUFFLE1BQU0sa0NBQWtDLENBQUM7QUFDdkUsT0FBTyxFQUFFLGtCQUFrQixFQUFFLE1BQU0sY0FBYyxDQUFDO0FBQ2xELE9BQU8sRUFBRSxvQkFBb0IsRUFBRSxNQUFNLHVCQUF1QixDQUFDO0FBQzdELE9BQU8sRUFBRSx1QkFBdUIsRUFBRSxNQUFNLHlCQUF5QixDQUFDO0FBQ2xFLE9BQU8sRUFBRSw2QkFBNkIsRUFBRSxNQUFNLGdDQUFnQyxDQUFDO0FBQy9FLE9BQU8sRUFBRSxtQkFBbUIsRUFBRSxNQUFNLHFCQUFxQixDQUFDO0FBQzFELE9BQU8sRUFBRSx3QkFBd0IsRUFBRSxNQUFNLDJCQUEyQixDQUFDO0FBQ3JFLE9BQU8sRUFBRSxpQkFBaUIsRUFBRSx3QkFBd0IsRUFBRSxNQUFNLG1CQUFtQixDQUFDO0FBRWhGLE9BQU8sRUFBRSxPQUFPLEVBQUUsTUFBTSxZQUFZLENBQUM7QUFDckMsT0FBTyxFQUFFLGNBQWMsRUFBRSxvQkFBb0IsRUFBRSxNQUFNLDZCQUE2QixDQUFDO0FBQ25GLE9BQU8sRUFBRSxvQkFBb0IsRUFBRSxNQUFNLG9DQUFvQyxDQUFDO0FBQzFFLE9BQU8sRUFBRSx1QkFBdUIsRUFBRSxNQUFNLHdDQUF3QyxDQUFDO0FBQ2pGLE9BQU8sRUFBRSxzQkFBc0IsRUFBRSxNQUFNLDZCQUE2QixDQUFDO0FBQ3JFLE9BQU8sRUFBRSw0QkFBNEIsRUFBRSxNQUFNLCtCQUErQixDQUFDO0FBRTdFLE1BQU0seUJBQXlCLEdBQUcsQ0FBQyxhQUFhLEVBQUUsb0JBQW9CLEVBQUUsa0JBQWtCLEVBQUUsa0JBQWtCLENBQUMsQ0FBQztBQUVoSCxNQUlhLG1CQUFtQjs4R0FBbkIsbUJBQW1COytHQUFuQixtQkFBbUIsWUFORyxhQUFhLEVBQUUsb0JBQW9CLEVBQUUsa0JBQWtCLEVBQUUsa0JBQWtCLGFBQTNFLGFBQWEsRUFBRSxvQkFBb0IsRUFBRSxrQkFBa0IsRUFBRSxrQkFBa0I7K0dBTWpHLG1CQUFtQjs7U0FBbkIsbUJBQW1COzJGQUFuQixtQkFBbUI7a0JBSi9CLFFBQVE7bUJBQUM7b0JBQ1QsT0FBTyxFQUFFLHlCQUF5QjtvQkFDbEMsT0FBTyxFQUFFLHlCQUF5QjtpQkFDbEMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBOZ01vZHVsZSB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuaW1wb3J0IHsgTmdiRGF0ZXBpY2tlciwgTmdiRGF0ZXBpY2tlckNvbnRlbnQgfSBmcm9tICcuL2RhdGVwaWNrZXInO1xuaW1wb3J0IHsgTmdiRGF0ZXBpY2tlck1vbnRoIH0gZnJvbSAnLi9kYXRlcGlja2VyJztcbmltcG9ydCB7IE5nYklucHV0RGF0ZXBpY2tlciB9IGZyb20gJy4vZGF0ZXBpY2tlci1pbnB1dCc7XG5cbmV4cG9ydCB7IE5nYkRhdGVwaWNrZXIsIE5nYkRhdGVwaWNrZXJDb250ZW50LCBOZ2JEYXRlcGlja2VyTmF2aWdhdGVFdmVudCwgTmdiRGF0ZXBpY2tlclN0YXRlIH0gZnJvbSAnLi9kYXRlcGlja2VyJztcbmV4cG9ydCB7IE5nYklucHV0RGF0ZXBpY2tlciB9IGZyb20gJy4vZGF0ZXBpY2tlci1pbnB1dCc7XG5leHBvcnQgeyBOZ2JDYWxlbmRhciwgTmdiUGVyaW9kLCBOZ2JDYWxlbmRhckdyZWdvcmlhbiB9IGZyb20gJy4vbmdiLWNhbGVuZGFyJztcbmV4cG9ydCB7IE5nYkNhbGVuZGFySXNsYW1pY0NpdmlsIH0gZnJvbSAnLi9oaWpyaS9uZ2ItY2FsZW5kYXItaXNsYW1pYy1jaXZpbCc7XG5leHBvcnQgeyBOZ2JDYWxlbmRhcklzbGFtaWNVbWFscXVyYSB9IGZyb20gJy4vaGlqcmkvbmdiLWNhbGVuZGFyLWlzbGFtaWMtdW1hbHF1cmEnO1xuZXhwb3J0IHsgTmdiQ2FsZW5kYXJQZXJzaWFuIH0gZnJvbSAnLi9qYWxhbGkvbmdiLWNhbGVuZGFyLXBlcnNpYW4nO1xuZXhwb3J0IHsgTmdiQ2FsZW5kYXJIZWJyZXcgfSBmcm9tICcuL2hlYnJldy9uZ2ItY2FsZW5kYXItaGVicmV3JztcbmV4cG9ydCB7IE5nYkRhdGVwaWNrZXJJMThuSGVicmV3IH0gZnJvbSAnLi9oZWJyZXcvZGF0ZXBpY2tlci1pMThuLWhlYnJldyc7XG5leHBvcnQgeyBOZ2JDYWxlbmRhckJ1ZGRoaXN0IH0gZnJvbSAnLi9idWRkaGlzdC9uZ2ItY2FsZW5kYXItYnVkZGhpc3QnO1xuZXhwb3J0IHsgTmdiRGF0ZXBpY2tlck1vbnRoIH0gZnJvbSAnLi9kYXRlcGlja2VyJztcbmV4cG9ydCB7IE5nYkRhdGVwaWNrZXJEYXlWaWV3IH0gZnJvbSAnLi9kYXRlcGlja2VyLWRheS12aWV3JztcbmV4cG9ydCB7IE5nYkRhdGVwaWNrZXJOYXZpZ2F0aW9uIH0gZnJvbSAnLi9kYXRlcGlja2VyLW5hdmlnYXRpb24nO1xuZXhwb3J0IHsgTmdiRGF0ZXBpY2tlck5hdmlnYXRpb25TZWxlY3QgfSBmcm9tICcuL2RhdGVwaWNrZXItbmF2aWdhdGlvbi1zZWxlY3QnO1xuZXhwb3J0IHsgTmdiRGF0ZXBpY2tlckNvbmZpZyB9IGZyb20gJy4vZGF0ZXBpY2tlci1jb25maWcnO1xuZXhwb3J0IHsgTmdiSW5wdXREYXRlcGlja2VyQ29uZmlnIH0gZnJvbSAnLi9kYXRlcGlja2VyLWlucHV0LWNvbmZpZyc7XG5leHBvcnQgeyBOZ2JEYXRlcGlja2VySTE4biwgTmdiRGF0ZXBpY2tlckkxOG5EZWZhdWx0IH0gZnJvbSAnLi9kYXRlcGlja2VyLWkxOG4nO1xuZXhwb3J0IHsgTmdiRGF0ZVN0cnVjdCB9IGZyb20gJy4vbmdiLWRhdGUtc3RydWN0JztcbmV4cG9ydCB7IE5nYkRhdGUgfSBmcm9tICcuL25nYi1kYXRlJztcbmV4cG9ydCB7IE5nYkRhdGVBZGFwdGVyLCBOZ2JEYXRlU3RydWN0QWRhcHRlciB9IGZyb20gJy4vYWRhcHRlcnMvbmdiLWRhdGUtYWRhcHRlcic7XG5leHBvcnQgeyBOZ2JEYXRlTmF0aXZlQWRhcHRlciB9IGZyb20gJy4vYWRhcHRlcnMvbmdiLWRhdGUtbmF0aXZlLWFkYXB0ZXInO1xuZXhwb3J0IHsgTmdiRGF0ZU5hdGl2ZVVUQ0FkYXB0ZXIgfSBmcm9tICcuL2FkYXB0ZXJzL25nYi1kYXRlLW5hdGl2ZS11dGMtYWRhcHRlcic7XG5leHBvcnQgeyBOZ2JEYXRlUGFyc2VyRm9ybWF0dGVyIH0gZnJvbSAnLi9uZ2ItZGF0ZS1wYXJzZXItZm9ybWF0dGVyJztcbmV4cG9ydCB7IE5nYkRhdGVwaWNrZXJLZXlib2FyZFNlcnZpY2UgfSBmcm9tICcuL2RhdGVwaWNrZXIta2V5Ym9hcmQtc2VydmljZSc7XG5cbmNvbnN0IE5HQl9EQVRFUElDS0VSX0RJUkVDVElWRVMgPSBbTmdiRGF0ZXBpY2tlciwgTmdiRGF0ZXBpY2tlckNvbnRlbnQsIE5nYklucHV0RGF0ZXBpY2tlciwgTmdiRGF0ZXBpY2tlck1vbnRoXTtcblxuQE5nTW9kdWxlKHtcblx0ZXhwb3J0czogTkdCX0RBVEVQSUNLRVJfRElSRUNUSVZFUyxcblx0aW1wb3J0czogTkdCX0RBVEVQSUNLRVJfRElSRUNUSVZFUyxcbn0pXG5leHBvcnQgY2xhc3MgTmdiRGF0ZXBpY2tlck1vZHVsZSB7fVxuIl19

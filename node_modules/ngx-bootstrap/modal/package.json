@@ -1,0 +1,28 @@
+{
+  "name": "ngx-bootstrap/modal",
+  "version": "11.0.2",
+  "author": "Dmitriy Shekhovtsov <valorkin@gmail.com>",
+  "license": "MIT",
+  "module": "fesm2022/ngx-bootstrap-modal.mjs",
+  "typings": "index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "esm2022": "./esm2022/ngx-bootstrap-modal.mjs",
+      "esm": "./esm2022/ngx-bootstrap-modal.mjs",
+      "default": "./fesm2022/ngx-bootstrap-modal.mjs"
+    }
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "peerDependencies": {
+    "@angular/core": "16.1.4",
+    "ngx-bootstrap/component-loader": "11.0.2",
+    "ngx-bootstrap/focus-trap": "11.0.2"
+  }
+}
