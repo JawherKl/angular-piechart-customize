@@ -1,0 +1,1 @@
+# This example demonstrates how to create and customize a pie chart using Angular. The example includes the basic setup of an Angular application with a pie chart component, showcasing how to render, style, and manipulate a pie chart.
